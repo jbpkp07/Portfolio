@@ -1,0 +1,244 @@
+#version:after {
+  content: "Jeremy Barnes v1.0";
+}
+
+body {
+  background: rgba(18,18,18,1.0);
+  color: rgba(248,248,248,1.0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+#header {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+}
+
+#headerBox {
+  background: rgba(48,48,48,1.0);
+  border: 3px solid rgba(128,128,128,1.0);
+  border-radius: 10px;
+  margin: 20px auto 0px auto;
+  max-width: 1140px;
+}
+
+#navbar {
+  padding: 0;
+}
+
+#navbarContainer {
+  padding: 0;
+}
+
+#navbarBrand {
+  margin: 0;
+  padding: 0;
+}
+
+#myName {
+  background: rgba(32,32,32,1.0);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: rgba(0,174,239,1.0);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding: 20px;
+}
+
+#navbarTogglerButton {
+  margin-right: 20px;
+  outline: none;
+}
+
+
+
+#navbarResponsive {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.nav-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#navLink {
+  color: rgba(0,174,239,0.5);
+  font-weight: 700;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+#navLink:hover, #navLinkActive {
+  color: rgba(0,174,239,1.0);
+  font-weight: 700;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+
+
+/* #navbar {
+  background: #ffffff;
+  text-align: center;
+} */
+
+#main {
+  margin: 125px auto 100px auto;
+  max-width: 920px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+
+.containerMain {
+  background: rgba(84,84,84,1.0);
+  border: 3px solid rgba(128,128,128,1.0);
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 30px 30px 60px 30px;
+}
+
+#aboutMe {
+  background: rgba(84,84,84,1.0);
+  color: rgba(0,174,239,1.0);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+hr {
+  background: rgba(32,32,32,1.0);
+  margin-bottom: 30px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.portfolioIMG {
+  max-width: 300px;
+  position: relative;
+}
+
+.imgOverlay {
+  background: #4aaaa5;
+  bottom: 15px;
+  color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  height: 30px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+#messageTextArea {
+  height: 200px;
+}
+
+.input-group-text {
+  background: #4aaaa5;
+  color: #ffffff;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12pt;
+  width: 75px;
+}
+
+.btn {
+  background: #4aaaa5;
+  border: none;
+  width: 75px;
+}
+
+footer {
+  background: #666666;
+  border-top: 8px solid rgba(0,174,239,1.0);
+  bottom: 0;
+  color: #cccccc;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.placeholderBio {
+  color: #CCCCCC;
+}
+
+
+/* For some reason the below form-contorls can't be combined into the same CSS block */
+.form-control::-webkit-input-placeholder { color: #CCCCCC;   }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #CCCCCC; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #CCCCCC; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #CCCCCC; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #CCCCCC; }  /* Microsoft Edge */
+
+
+@media only screen and (max-width: 1199px) {
+  
+  #headerBox {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  
+  #headerBox {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  #headerBox {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  /* #header {
+    background-color: #4aaaa5;
+  } */
+  
+  /* body {
+    background: #ffffff;
+  } */
+  
+  #headerBox {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #myName {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  #navbarResponsive {
+    background: rgba(128,128,128,1.0);
+    text-align: center;
+  }
+  
+  .containerMain {
+    border: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 30px 15px 120px 15px;
+  }
+}
