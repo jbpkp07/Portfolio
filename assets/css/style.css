@@ -21,14 +21,19 @@ body {
   top: 0%;
   width: 100%;
   z-index: 1;
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 #headerBox {
   background: rgba(48,48,48,1.0);
   border: 3px solid rgba(128,128,128,1.0);
   border-radius: 10px;
-  margin: 20px auto 0px auto;
-  max-width: 1140px;
+  margin: 15px auto 0px auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 #navbar {
@@ -53,7 +58,7 @@ body {
   font-weight: 700;
   line-height: 1;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
 }
 
 #navbarTogglerButton {
@@ -68,19 +73,19 @@ body {
   border-bottom-right-radius: 7px;
 }
 
-.nav-item {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.navbar-nav {
+  margin-left: auto;
 }
 
-#navLink {
+
+#navLinkAbout:not(.navLinkActive), #navLinkPortfolio:not(.navLinkActive), #navLinkContact:not(.navLinkActive) {
   color: rgba(0,174,239,0.5);
   font-weight: 700;
   margin-right: 20px;
   text-decoration: none;
 }
 
-#navLink:hover, #navLinkActive {
+#navLinkAbout:hover, #navLinkPortfolio:hover, #navLinkContact:hover, .navLinkActive {
   color: rgba(0,174,239,1.0);
   font-weight: 700;
   margin-right: 20px;
@@ -190,21 +195,21 @@ footer {
 @media only screen and (max-width: 1199px) {
   
   #headerBox {
-    max-width: 960px;
+    /* max-width: 960px; */
   }
 }
 
 @media only screen and (max-width: 991px) {
   
   #headerBox {
-    max-width: 720px;
+    /* max-width: 720px; */
   }
 }
 
 @media only screen and (max-width: 767px) {
 
   #headerBox {
-    max-width: 540px;
+    /* max-width: 540px; */
   }
 }
 
@@ -218,14 +223,63 @@ footer {
   } */
   
   #headerBox {
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
   }
 
   #myName {
-    font-size: 24px;
+    font-size: 22px;
   }
   
+  #navbarTogglerButton {
+    margin-right: 10px;
+  }
+
+  .nav-item {
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+  }
+
+  #navLinkAbout:not(.navLinkActive), #navLinkPortfolio:not(.navLinkActive), #navLinkContact:not(.navLinkActive) {
+    background: rgba(48,48,48,1.0);
+    border: 2px solid rgba(32,32,32,1.0);
+    border-radius: 10px;
+    color: rgba(0,174,239,0.5);
+    display: inline-block;
+    font-weight: 700;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    text-decoration: none;
+    width: 100px;
+  }
+  
+  #navLinkAbout:hover, #navLinkPortfolio:hover, #navLinkContact:hover, .navLinkActive {
+    background: rgba(48,48,48,1.0);
+    border: 2px solid rgba(32,32,32,1.0);
+    border-radius: 10px;
+    color: rgba(0,174,239,1.0);
+    display: inline-block;
+    font-weight: 700;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    text-decoration: none;
+    width: 100px;
+  }
+
+  #navLinkContact:not(.navLinkActive) {
+    margin: 20px 0px 20px 0px;
+  }
+
+
+
+  /* .navLink {
+    background: rgba(48,48,48,1.0);
+    padding: 10px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  } */
+
   h2 {
     font-size: 20px;
   }
