@@ -1,37 +1,51 @@
-#version:after {
-  content: "Jeremy Barnes v1.0";
+:root {
+  --light-white: rgba(248, 248, 248, 1.0);
+  --medium-white: rgba(232, 232, 232, 1.0);
+  --dark-white: rgba(192, 192, 192, 1.0);
+
+  --lightest-gray: rgba(136, 136, 136, 1.0);
+  --lighter-gray: rgba(96, 96, 96, 1.0);
+  --light-gray: rgba(48, 48, 48, 1.0);
+  --medium-gray: rgba(32, 32, 32, 1.0);
+  --dark-gray: rgba(18, 18, 18, 1.0);
+  --black: rgba(0, 0, 0,1.0);
+
+  --light-blue: rgba(0, 174, 239, 1.0);
+  --light-blue-transparent:  rgba(0, 174, 239, 0.75);
+}
+
+html {
+  cursor: default;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  background: rgba(18,18,18,1.0);
-  color: rgba(248,248,248,1.0);
+  background: var(--dark-gray);
+  color: var(--dark-gray);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
-  height: 100%;
-  margin: 0;
+  font-weight: 400;
   overflow-x: hidden;
   /* overflow-y: hidden; */
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  width: 100%;
 }
 
 #header {
+  padding: 10px 10px 0px 10px;
   position: fixed;
   top: 0%;
   width: 100%;
   z-index: 1;
-  /* margin-left: 20px; */
-  /* margin-right: 20px; */
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 #headerBox {
-  background: rgba(48,48,48,1.0);
-  border: 3px solid rgba(128,128,128,1.0);
+  background: var(--light-gray);
+  border: 3px solid var(--lighter-gray);
   border-radius: 10px;
-  margin: 15px auto 0px auto;
+  box-shadow: 0px 0px 20px var(--black);
+  margin: 0 auto;
   max-width: 1200px;
   width: 100%;
 }
@@ -50,79 +64,185 @@ body {
 }
 
 #myName {
-  background: rgba(32,32,32,1.0);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  color: rgba(0,174,239,1.0);
+  background: var(--medium-gray);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  color: var(--light-blue);
   font-size: 32px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.0;
   margin: 0;
   padding: 15px;
 }
 
 #navbarTogglerButton {
-  margin-right: 20px;
+  background: var(--light-gray);
   outline: none;
 }
 
-
+#navbarTogglerButton:hover {
+  background: var(--medium-gray);
+}
 
 #navbarResponsive {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .navbar-nav {
   margin-left: auto;
 }
 
-
-#navLinkAbout:not(.navLinkActive), #navLinkPortfolio:not(.navLinkActive), #navLinkContact:not(.navLinkActive) {
-  color: rgba(0,174,239,0.5);
+#navLinkAbout, #navLinkPortfolio, #navLinkContact {
   font-weight: 700;
   margin-right: 20px;
   text-decoration: none;
+}
+
+#navLinkAbout:not(.navLinkActive), #navLinkPortfolio:not(.navLinkActive), #navLinkContact:not(.navLinkActive) {
+  color: var(--light-blue-transparent);
 }
 
 #navLinkAbout:hover, #navLinkPortfolio:hover, #navLinkContact:hover, .navLinkActive {
-  color: rgba(0,174,239,1.0);
-  font-weight: 700;
-  margin-right: 20px;
-  text-decoration: none;
+  color: var(--light-blue);
 }
-
-
-
-/* #navbar {
-  background: #ffffff;
-  text-align: center;
-} */
 
 #main {
-  margin: 125px auto 100px auto;
+  margin: 150px auto 120px auto;
   max-width: 920px;
-  /* padding-left: 20px;
-  padding-right: 20px; */
+  width: 90%;
 }
 
-.containerMain {
-  background: rgba(84,84,84,1.0);
-  border: 3px solid rgba(128,128,128,1.0);
+#containerMain {
+  background: var(--lightest-gray);
+  border: 3px solid var(--light-gray);
   border-radius: 10px;
-  margin-top: 40px;
+  overflow: auto;
   padding: 30px 30px 60px 30px;
 }
 
 #aboutMe {
-  background: rgba(84,84,84,1.0);
-  color: rgba(0,174,239,1.0);
-  font-size: 30px;
-  font-weight: bold;
-  margin: 0;
+  background: var(--light-gray);
+  border-radius: 5px;
+  color: var(--light-blue);
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
 }
 
-hr {
+#aboutMeIMG {
+  border-radius: 5px;
+  float: left;
+  margin: 20px 20px 0px 0px;
+  width: 50%;
+  max-width: 400px;
+}
+
+#aboutText {
+  margin-top: 16px;
+}
+
+#links {
+  background: var(--light-gray);
+  border-radius: 5px;;
+  color: var(--light-blue-transparent);
+  padding: 7px;
+  text-decoration: none;
+}
+
+#links:hover {
+  color: var(--light-blue);
+}
+
+footer {
+  background: var(--light-gray);
+  border-top: 3px solid var(--light-blue);
+  bottom: 0;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+}
+
+@media only screen and (max-width: 575px) {
+
+  #myName {
+    font-size: 22px;
+  }
+  
+  #navbarTogglerButton {
+    margin-right: 10px;
+  }
+
+  #navbarResponsive {
+    background: var(--lightest-gray);
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 294px;
+  }
+
+  .nav-item {
+    margin: 10px 5px 10px 5px;
+    width: 88px;
+  }
+
+  #navLinkAbout, #navLinkPortfolio, #navLinkContact {
+    background: var(--light-gray);
+    border: 3px solid var(--medium-gray);
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 11pt;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #main {
+    width: 100%;
+  }
+
+  #containerMain {
+    border: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 30px 15px 120px 15px;
+  }
+
+  #aboutMeIMG {
+    max-width: 575px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hr {
   background: rgba(32,32,32,1.0);
   margin-bottom: 30px;
   height: 3px;
@@ -168,131 +288,18 @@ input {
   width: 75px;
 }
 
-footer {
-  background: #666666;
-  border-top: 8px solid rgba(0,174,239,1.0);
-  bottom: 0;
-  color: #cccccc;
-  height: 60px;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-}
+
 
 .placeholderBio {
   color: #CCCCCC;
 }
 
 
-/* For some reason the below form-contorls can't be combined into the same CSS block */
-.form-control::-webkit-input-placeholder { color: #CCCCCC;   }  /* WebKit, Blink, Edge */
-.form-control:-moz-placeholder { color: #CCCCCC; }  /* Mozilla Firefox 4 to 18 */
-.form-control::-moz-placeholder { color: #CCCCCC; }  /* Mozilla Firefox 19+ */
-.form-control:-ms-input-placeholder { color: #CCCCCC; }  /* Internet Explorer 10-11 */
-.form-control::-ms-input-placeholder { color: #CCCCCC; }  /* Microsoft Edge */
 
+.form-control::-webkit-input-placeholder { color: #CCCCCC;   }  
+.form-control:-moz-placeholder { color: #CCCCCC; }  
+.form-control::-moz-placeholder { color: #CCCCCC; } 
+.form-control:-ms-input-placeholder { color: #CCCCCC; } 
+.form-control::-ms-input-placeholder { color: #CCCCCC; } 
 
-@media only screen and (max-width: 1199px) {
-  
-  #headerBox {
-    /* max-width: 960px; */
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  
-  #headerBox {
-    /* max-width: 720px; */
-  }
-}
-
-@media only screen and (max-width: 767px) {
-
-  #headerBox {
-    /* max-width: 540px; */
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  /* #header {
-    background-color: #4aaaa5;
-  } */
-  
-  /* body {
-    background: #ffffff;
-  } */
-  
-  #headerBox {
-    /* margin-left: 10px; */
-    /* margin-right: 10px; */
-  }
-
-  #myName {
-    font-size: 22px;
-  }
-  
-  #navbarTogglerButton {
-    margin-right: 10px;
-  }
-
-  .nav-item {
-    /* margin-top: 10px; */
-    /* margin-bottom: 10px; */
-  }
-
-  #navLinkAbout:not(.navLinkActive), #navLinkPortfolio:not(.navLinkActive), #navLinkContact:not(.navLinkActive) {
-    background: rgba(48,48,48,1.0);
-    border: 2px solid rgba(32,32,32,1.0);
-    border-radius: 10px;
-    color: rgba(0,174,239,0.5);
-    display: inline-block;
-    font-weight: 700;
-    padding: 10px;
-    margin: 20px 0px 0px 0px;
-    text-decoration: none;
-    width: 100px;
-  }
-  
-  #navLinkAbout:hover, #navLinkPortfolio:hover, #navLinkContact:hover, .navLinkActive {
-    background: rgba(48,48,48,1.0);
-    border: 2px solid rgba(32,32,32,1.0);
-    border-radius: 10px;
-    color: rgba(0,174,239,1.0);
-    display: inline-block;
-    font-weight: 700;
-    padding: 10px;
-    margin: 20px 0px 0px 0px;
-    text-decoration: none;
-    width: 100px;
-  }
-
-  #navLinkContact:not(.navLinkActive) {
-    margin: 20px 0px 20px 0px;
-  }
-
-
-
-  /* .navLink {
-    background: rgba(48,48,48,1.0);
-    padding: 10px;
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-  } */
-
-  h2 {
-    font-size: 20px;
-  }
-  
-  #navbarResponsive {
-    background: rgba(128,128,128,1.0);
-    text-align: center;
-  }
-  
-  .containerMain {
-    border: 0;
-    border-radius: 0;
-    margin-top: 0;
-    padding: 30px 15px 120px 15px;
-  }
-}
+  */
