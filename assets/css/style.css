@@ -262,7 +262,6 @@ footer {
   }
   
   #main {
-    margin-bottom: 300px;
     width: 100%;
   }
 
@@ -300,5 +299,9 @@ footer {
 
   .projectLinks {
     margin-bottom: 5%;
+  }
+
+  footer {
+    display: none;
   }
 }
