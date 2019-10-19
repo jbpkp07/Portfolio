@@ -2,4 +2,4 @@
 
 ### Deployed website:
 
-https://delight-project2.herokuapp.com
+https://jbpkp07.github.io/Portfolio
