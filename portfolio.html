@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About: Jeremy Barnes</title>
+    <title>Jeremy Barnes v1.2</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
 
@@ -20,109 +20,86 @@
 
 <body>
 
-    <header>
+    <div id="header">
         <div id="headerBox">
-            <nav class="navbar navbar-expand-sm navbar-light static-top p-0">
-                <div class="container p-0">
-
-                    <a class="navbar-brand p-0 mr-0" href="./index.html">
-                        <h1>Jeremy Barnes</h1>
+            <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
+                <div id="navbarContainer" class="container-fluid">
+                    <a id="navbarBrand" class="navbar-brand" href="./index.html">
+                        <div id="myName">Jeremy Barnes</div>
                     </a>
-
-                    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse"
-                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button id="navbarTogglerButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./index.html">About</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Contact</a>
-                            </li>
-                        </ul>
+                    <div id="navbarResponsive" class="collapse navbar-collapse">
+                        <div class="navbar-nav">
+                            <div class="nav-item">
+                                <a id="navLinkAbout" href="./index.html">About</a>
+                            </div>
+                            <div class="nav-item">
+                                <a id="navLinkPortfolio" class="navLinkActive" href="#">Portfolio</a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <div class="container containerMain">
-
-            <div class="row">
-                <div class="col-md">
-                    <h2>Portfolio</h2>
-                    <hr>
+    <div id="main">
+        <div id="containerPorfolio">
+            <div id="portfolioLabel">Portfolio</div>
+            <div id="projectsContainer">
+                <div class="projectWrapper">
+                    <div class="projectTitle">GifTastic</div>
+                    <img class="projectImg" src="./assets/images/giftastic.jpg" alt="GifTastic">
+                    <div class="projectLinks">
+                        <a class="link" href="https://jbpkp07.github.io/GifTastic/" target="_blank">view project</a>
+                        <a class="link" href="https://github.com/jbpkp07/GifTastic" target="_blank">github</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-9 col-md-12">
-                    <div class="row">
-                        <div class="col-md-6 mb-5">
-                            <div class="portfolioIMG">
-                                <a href="https://jbpkp07.github.io/Word-Guess-Game/" target="_blank">
-                                    <img src="./assets/images/hangman.jpg" class="img-fluid rounded" alt="Hang Man">
-                                    <div class="imgOverlay">Hangman - Click Here!</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-5">
-                            <div class="portfolioIMG">
-                                <a href="https://jbpkp07.github.io/RPG-Game/" target="_blank">
-                                    <img src="./assets/images/rpgGame.jpg" class="img-fluid rounded" alt="RPG Game">
-                                    <div class="imgOverlay">RPG Game - Click Here!</div>
-                                </a>
-                            </div>
-                        </div>
+                <div class="projectWrapper">
+                    <div class="projectTitle">TechIn</div>
+                    <img class="projectImg" src="./assets/images/techin.jpg" alt="TechIn">
+                    <div class="projectLinks">
+                        <a class="link" href="https://jbpkp07.github.io/Project1/" target="_blank">view project</a>
+                        <a class="link" href="https://github.com/jbpkp07/Project1" target="_blank">github</a>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-5">
-                            <div class="portfolioIMG">
-                                <a href="https://jbpkp07.github.io/TriviaGame/" target="_blank">
-                                    <img src="./assets/images/triviaGame.jpg" class="img-fluid rounded" alt="Trivia Game">
-                                    <div class="imgOverlay">Trivia Game - Click Here!</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-5">
-                            <div class="portfolioIMG">
-                                <a href="https://jbpkp07.github.io/GifTastic/" target="_blank">
-                                    <img src="./assets/images/infoWidget.jpg" class="img-fluid rounded" alt="GifTastic">
-                                    <div class="imgOverlay">GifTastic - Click Here!</div>
-                                </a>
-                            </div>
-                        </div>
+                </div>
+                <div class="projectWrapper">
+                    <div class="projectTitle">Bamazon</div>
+                    <img class="projectImg" src="./assets/images/bamazon.jpg" alt="Bamazon">
+                    <div class="projectLinks">
+                        <a class="link" href="https://github.com/jbpkp07/Bamazon" target="_blank">github</a>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolioIMG">
-                                <a href="https://jbpkp07.github.io/Train-Scheduler/" target="_blank">
-                                    <img src="./assets/images/train.jpg" class="img-fluid rounded" alt="Train Scheduler">
-                                    <div class="imgOverlay">Train Scheduler - Click Here!</div>
-                                </a>
-                            </div>
-                        </div>
+                </div>
+                <div class="projectWrapper">
+                    <div class="projectTitle">Sequelized Burger</div>
+                    <img class="projectImg" src="./assets/images/burgers.jpg" alt="Sequelized Burger">
+                    <div class="projectLinks">
+                        <a class="link" href="https://jbpkp07-sequelized-burger.herokuapp.com" target="_blank">view project</a>
+                        <a class="link" href="https://github.com/jbpkp07/SequelizedBurger" target="_blank">github</a>
+                    </div>
+                </div>
+                <div class="projectWrapper">
+                    <div class="projectTitle">Delight</div>
+                    <img class="projectImg" src="./assets/images/delight.jpg" alt="Delight">
+                    <div class="projectLinks">
+                        <a class="link" href="https://delight-project2.herokuapp.com" target="_blank">view project</a>
+                        <a class="link" href="https://github.com/jbpkp07/Delight" target="_blank">github</a>
+                    </div>
+                </div>
+                <div class="projectWrapper">
+                    <div class="projectTitle">RatMaze</div>
+                    <img class="projectImg" src="./assets/images/ratmaze.png" alt="RatMaze">
+                    <div class="projectLinks">
+                        <a class="link" href="https://github.com/jbpkp07/RatMaze" target="_blank">github</a>
                     </div>
                 </div>
             </div>
-
         </div>
-    </main>
+    </div>
 
-    <footer class="footer">
-        <div class="container-fluid mt-2">
-            <span id="version"></span>
-        </div>
-    </footer>
+    <footer class="footer"></footer>
 
 </body>
 
