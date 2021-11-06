@@ -145,12 +145,26 @@ body {
   margin-right: 20px;
 }
 
-#aboutMeIMG {
-  border-radius: 5px;
+#aboutMeImgContainer {
   float: left;
   margin-right: 20px;
   max-width: 400px;
+  position: relative;
   width: 50%;
+}
+
+#aboutMeImgPlaceholder {
+  border-radius: 5px;
+  visibility: hidden;
+  width: 100%;
+}
+
+#aboutMeImg {
+  border-radius: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #aboutText {
@@ -285,7 +299,7 @@ a.projectImgLink {
     padding: 30px 15px 20px 15px;
   }
 
-  #aboutMeIMG {
+  #aboutMeImgContainer {
     margin-bottom: 20px;
     max-width: 575px;
     width: 100%;
