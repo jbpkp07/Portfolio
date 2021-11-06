@@ -3,12 +3,12 @@
   --medium-white: rgba(232, 232, 232, 1.0);
   --dark-white: rgba(192, 192, 192, 1.0);
 
-  --lightest-gray: rgba(136, 136, 136, 1.0);
+  --lightest-gray: rgba(160, 160, 160, 1.0);
   --lighter-gray: rgba(96, 96, 96, 1.0);
   --light-gray: rgba(48, 48, 48, 1.0);
   --medium-gray: rgba(32, 32, 32, 1.0);
   --dark-gray: rgba(18, 18, 18, 1.0);
-  --black: rgba(0, 0, 0,1.0);
+  --black: rgba(0, 0, 0, 1.0);
 
   --light-blue: rgba(0, 174, 239, 1.0);
   --light-blue-transparent:  rgba(0, 174, 239, 0.667);
@@ -31,7 +31,6 @@ body {
   font-size: 12pt;
   font-weight: 400;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -119,7 +118,7 @@ body {
   width: 90%;
 }
 
-#containerAbout, #containerPorfolio {
+#aboutContainer, #portfolioContainer {
   background: var(--lightest-gray);
   border: 3px solid var(--light-gray);
   border-radius: 10px;
@@ -127,7 +126,7 @@ body {
   padding: 30px;
 }
 
-#containerPorfolio {
+#portfolioContainer {
   padding: 30px 10px 10px 30px;
 }
 
@@ -155,7 +154,6 @@ body {
 }
 
 #aboutText {
-  color: var(--black);
   font-size: 13pt;
   margin-top: -5px;
 }
@@ -182,7 +180,7 @@ a.link:hover {
   flex-wrap: wrap;
 }
 
-.projectWrapper {
+.projectContainer {
   background: var(--lighter-gray);
   border: 3px solid var(--light-gray);
   border-radius: 10px;
@@ -277,7 +275,7 @@ a.projectImgLink {
     width: 100%;
   }
 
-  #containerAbout, #containerPorfolio {
+  #aboutContainer, #portfolioContainer {
     border-left: 0;
     border-right: 0;
     border-top: 3px solid var(--light-gray);
@@ -298,7 +296,7 @@ a.projectImgLink {
     margin-bottom: 40px;
   }
 
-  .projectWrapper {
+  .projectContainer {
     height: calc(100vw);
     margin: 0px 0px 40px 0px;
     width: 100%;
