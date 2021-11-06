@@ -225,15 +225,6 @@ a.projectImgLink {
   text-align: center;
 }
 
-footer {
-  background: var(--light-gray);
-  border-top: 3px solid var(--light-blue);
-  bottom: 0;
-  height: 40px;
-  position: fixed;
-  width: 100%;
-}
-
 @media only screen and (min-width: 576px) {
   body {
     background-image: url(../images/background.jpg);
@@ -324,9 +315,5 @@ footer {
 
   .projectLinks {
     margin-bottom: 5%;
-  }
-
-  footer {
-    display: none;
   }
 }
