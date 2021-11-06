@@ -114,6 +114,7 @@ body {
 
 #main {
   margin: 150px auto 120px auto;
+  padding-bottom: 120px;
   max-width: 920px;
   width: 90%;
 }
@@ -127,7 +128,7 @@ body {
 }
 
 #containerPorfolio {
-  padding: 30px 10px 30px 30px;
+  padding: 30px 10px 10px 30px;
 }
 
 #aboutMeLabel, .aboutTextLabels, #portfolioLabel {
@@ -149,8 +150,8 @@ body {
   border-radius: 5px;
   float: left;
   margin-right: 20px;
-  width: 50%;
   max-width: 400px;
+  width: 50%;
 }
 
 #aboutText {
@@ -241,7 +242,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575.9px) {
 
   body {
     background-image: none;
