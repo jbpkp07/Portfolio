@@ -28,7 +28,6 @@ const buildNewAboutMeImage = () => {
     aboutMeImage.src = imageAssetPath;
     aboutMeImage.alt = imageAssetPath.split("/").pop();
     aboutMeImage.draggable = false;
-    aboutMeImage.style = "display: none;";
 
     return aboutMeImage;
 };
@@ -39,6 +38,7 @@ const rotateNextAboutMeImage = () => {
     const currentImageElement = $(aboutMeImageIdSelector);
     const nextImageElement = $(newAboutMeImage);
 
+    nextImageElement.hide();
     imageContainerElement.append(nextImageElement);
 
     currentImageElement.fadeOut(1500, () => currentImageElement.remove());
