@@ -303,6 +303,7 @@ a.projectImgLink {
   }
 
   #aboutMeImgContainer {
+    float: none;
     margin-bottom: 20px;
     max-width: 575px;
     width: 100%;
