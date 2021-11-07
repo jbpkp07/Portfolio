@@ -13,9 +13,9 @@ const aboutMeImageAssetPaths = {
         "./assets/images/aboutMeOffice.jpg",
         "./assets/images/aboutMeYosemite.jpg"
     ],
-    nextPath: function() {
+    nextPath: function () {
         this.index < this.paths.length - 1 ? this.index++ : this.index = 0;
-    
+
         return this.paths[this.index];
     }
 };
@@ -38,11 +38,11 @@ const rotateNextAboutMeImage = () => {
     const currentImageElement = $(aboutMeImageIdSelector);
     const nextImageElement = $(newAboutMeImage);
 
-    nextImageElement.hide();
-    imageContainerElement.append(nextImageElement);
-
-    currentImageElement.fadeOut(1500, () => currentImageElement.remove());
-    nextImageElement.fadeIn(1500);
+    nextImageElement.hide(0, () => {
+        imageContainerElement.append(nextImageElement);
+        currentImageElement.fadeOut(1500, () => currentImageElement.remove());
+        nextImageElement.fadeIn(1500);
+    });
 };
 
 const rotateAboutMeImages = () => {
