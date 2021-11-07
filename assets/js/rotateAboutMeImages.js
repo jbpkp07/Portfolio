@@ -38,7 +38,7 @@ const rotateNextAboutMeImage = () => {
     const currentImageElement = $(aboutMeImageIdSelector);
     const nextImageElement = $(newAboutMeImage);
 
-    nextImageElement.hide(0, () => {
+    nextImageElement.hide(0, () => { // hide() with callback fixes flickering on mobile
         imageContainerElement.append(nextImageElement);
         currentImageElement.fadeOut(1500, () => currentImageElement.remove());
         nextImageElement.fadeIn(1500);
