@@ -9,6 +9,7 @@
   --medium-gray: rgba(32, 32, 32, 1.0);
   --dark-gray: rgba(18, 18, 18, 1.0);
   --black: rgba(0, 0, 0, 1.0);
+  --black-transparent: rgba(0, 0, 0, 0.5);
 
   --light-blue: rgba(0, 174, 239, 1.0);
   --light-blue-transparent:  rgba(0, 174, 239, 0.667);
@@ -146,6 +147,8 @@ body {
 }
 
 #aboutMeImgContainer {
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px var(--black-transparent);
   float: left;
   margin-right: 20px;
   max-width: 400px;
