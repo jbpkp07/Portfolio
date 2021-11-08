@@ -1,3 +1,6 @@
+const crossFadeImagesDuration = 1500;
+const rotateImagesDelay = crossFadeImagesDuration + 3000;
+
 const aboutMeImageIdSelector = "#aboutMeImg";
 const aboutMeImageContainerIdSelector = "#aboutMeImgContainer";
 
@@ -20,8 +23,7 @@ const aboutMeImageAssetPaths = {
     }
 };
 
-const buildNewAboutMeImage = () => {
-    const imageAssetPath = aboutMeImageAssetPaths.nextPath();
+const createAboutMeImage = (imageAssetPath) => {
     const aboutMeImage = new Image();
 
     aboutMeImage.id = aboutMeImageIdSelector.substr(1);
@@ -32,21 +34,26 @@ const buildNewAboutMeImage = () => {
     return aboutMeImage;
 };
 
+const createNextAboutMeImage = () => {
+    return createAboutMeImage(aboutMeImageAssetPaths.nextPath());
+};
+
 const rotateNextAboutMeImage = () => {
-    const newAboutMeImage = buildNewAboutMeImage();
+    const nextImage = createNextAboutMeImage();
+
     const imageContainerElement = $(aboutMeImageContainerIdSelector);
     const currentImageElement = $(aboutMeImageIdSelector);
-    const nextImageElement = $(newAboutMeImage);
+    const nextImageElement = $(nextImage);
 
-    nextImageElement.hide(0, () => { // hide() with callback fixes flickering on mobile
+    nextImageElement.hide(0, () => { // hide() with callback seems to fix flickering bug on mobile
         imageContainerElement.append(nextImageElement);
-        currentImageElement.fadeOut(1500, () => currentImageElement.remove());
-        nextImageElement.fadeIn(1500);
+        currentImageElement.fadeOut(crossFadeImagesDuration, () => currentImageElement.remove());
+        nextImageElement.fadeIn(crossFadeImagesDuration);
     });
 };
 
 const rotateAboutMeImages = () => {
-    setInterval(rotateNextAboutMeImage, 4500);
+    setInterval(rotateNextAboutMeImage, rotateImagesDelay);
 };
 
 jQuery(rotateAboutMeImages);
