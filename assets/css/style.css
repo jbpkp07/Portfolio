@@ -19,11 +19,6 @@
   user-select: none;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
-}
-
 html {
   cursor: default;
   height: 100%;
@@ -118,7 +113,6 @@ body {
 }
 
 #main {
-  /* font-family: Roboto; */
   margin: 120px auto 120px auto;
   max-width: 920px;
   padding-bottom: 40px;
