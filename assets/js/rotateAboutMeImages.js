@@ -23,19 +23,8 @@ const aboutMeImageAssetPaths = {
     }
 };
 
-const createAboutMeImage = (imageAssetPath) => {
-    const aboutMeImage = new Image();
-
-    aboutMeImage.id = aboutMeImageIdSelector.substr(1);
-    aboutMeImage.src = imageAssetPath;
-    aboutMeImage.alt = imageAssetPath.split("/").pop();
-    aboutMeImage.draggable = false;
-
-    return aboutMeImage;
-};
-
-const createNextAboutMeImage = () => {
-    return createAboutMeImage(aboutMeImageAssetPaths.nextPath());
+const rotateAboutMeImages = () => {
+    setInterval(rotateNextAboutMeImage, rotateImagesDelay);
 };
 
 const rotateNextAboutMeImage = () => {
@@ -52,8 +41,17 @@ const rotateNextAboutMeImage = () => {
     });
 };
 
-const rotateAboutMeImages = () => {
-    setInterval(rotateNextAboutMeImage, rotateImagesDelay);
+const createNextAboutMeImage = () => {
+    return createAboutMeImage(aboutMeImageAssetPaths.nextPath());
 };
 
-jQuery(rotateAboutMeImages);
+const createAboutMeImage = (imageAssetPath) => {
+    const aboutMeImage = new Image();
+
+    aboutMeImage.id = aboutMeImageIdSelector.substr(1);
+    aboutMeImage.src = imageAssetPath;
+    aboutMeImage.alt = imageAssetPath.split("/").pop();
+    aboutMeImage.draggable = false;
+
+    return aboutMeImage;
+};
