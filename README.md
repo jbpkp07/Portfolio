@@ -1,5 +1,5 @@
-# Portfolio
+# portfolio
 
 ### Deployed website:
 
-https://jbpkp07.github.io/Portfolio
+https://jbpkp07.github.io/portfolio
