@@ -2,7 +2,6 @@ const crossFadeImagesDuration = 1500;
 const rotateImagesDelay = crossFadeImagesDuration + 3000;
 
 const aboutMeImageIdSelector = "#aboutMeImg";
-const aboutMeImageContainerIdSelector = "#aboutMeImgContainer";
 
 const aboutMeImageAssetPaths = {
     index: 0,
@@ -16,8 +15,8 @@ const aboutMeImageAssetPaths = {
         "./assets/images/aboutMeOffice.jpg",
         "./assets/images/aboutMeYosemite.jpg"
     ],
-    nextPath: function () {
-        this.index < this.paths.length - 1 ? this.index++ : this.index = 0;
+    nextPath() {
+        this.index = (this.index + 1) % this.paths.length;
 
         return this.paths[this.index];
     }
@@ -30,7 +29,7 @@ const rotateAboutMeImages = () => {
 const rotateNextAboutMeImage = () => {
     const nextImage = createNextAboutMeImage();
 
-    const imageContainerElement = $(aboutMeImageContainerIdSelector);
+    const imageContainerElement = $(aboutMeImageIdSelector).parent();
     const currentImageElement = $(aboutMeImageIdSelector);
     const nextImageElement = $(nextImage);
 
@@ -42,7 +41,9 @@ const rotateNextAboutMeImage = () => {
 };
 
 const createNextAboutMeImage = () => {
-    return createAboutMeImage(aboutMeImageAssetPaths.nextPath());
+    const nextImageAssetPath = aboutMeImageAssetPaths.nextPath();
+
+    return createAboutMeImage(nextImageAssetPath);
 };
 
 const createAboutMeImage = (imageAssetPath) => {

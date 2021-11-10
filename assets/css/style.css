@@ -187,6 +187,10 @@ body {
   margin-top: -5px;
 }
 
+#aboutTextParagraphs {
+  min-height: 555px;
+}
+
 a.link {
   background: var(--light-gray);
   border: 1px solid var(--dark-gray);
@@ -266,6 +270,10 @@ a.projectImgLink {
     margin-bottom: 20px;
     max-width: 575px;
     width: 100%;
+  }
+
+  #aboutTextParagraphs {
+    min-height: 0;
   }
 }
 
